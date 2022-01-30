@@ -1,0 +1,12 @@
+beautifulsoup4==4.10.0
+bs4==0.0.1
+certifi==2021.10.8
+charset-normalizer==2.0.10
+idna==3.3
+pkg-resources==0.0.0
+python-dateutil==2.8.2
+requests==2.27.1
+scrapelib==2.0.6
+six==1.16.0
+soupsieve==2.3.1
+urllib3==1.26.8
