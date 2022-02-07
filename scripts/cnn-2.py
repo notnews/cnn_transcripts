@@ -40,7 +40,12 @@ def extract_transcript(html):
         if m:
             date = m.group(1)
             tz = m.group(2)
-            date = parser.parse(date)
+            try:
+                date = parser.parse(date)
+            except Exception as e:
+                print(e)
+                date = date.split('-')[0]
+                date = parser.parse(date)
             print(date, tz)
         elif text.startswith("THIS IS A RUSH TRANSCRIPT."):
             pass
@@ -66,11 +71,6 @@ def extract_transcript(html):
 
 
 if __name__ == "__main__":
-    importlib.reload(sys)
-
-    # sys.setdefaultencoding("utf-8")
-    if (sys.stdout.encoding != 'utf-8'):
-        sys.stdout.encoding = 'utf-8'
 
     f = open("cnn.csv", "a")
     writer = csv.DictWriter(f, fieldnames=columns, dialect='excel')
