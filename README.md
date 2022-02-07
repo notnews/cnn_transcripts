@@ -8,19 +8,21 @@ CNN went through a few HTML styles of the news transcripts between `2000/01/01`a
 
 * [till 2002/9/17](scripts/cnn-1.py)
 * [from 2002/9/17](scripts/cnn-1.py)
+* [from 2014/6/18](scripts/cnn-2.py)
 
 ### Data
 
 The parsed data are posted at [http://dx.doi.org/10.7910/DVN/ISDPJU](http://dx.doi.org/10.7910/DVN/ISDPJU). For copyright reasons, access is restricted for research purposes only. The data are split into 6 files:
 
-* `cnn-1.csv`. Data from 2000/01/01--2000/04/20. No. of transcripts = 7017
+* `cnn-1.csv`. Data from  2000/01/01--2000/04/20. No. of transcripts = 7017
 * `cnn-2.csv`. Data from  2000/04/21--2001/04/03. No. of transcripts = 21381
 * `cnn-3.csv`. Data from  2001/04/04--2002/08/06. No. of transcripts = 35269
 * `cnn-4.csv`. Data from  2002/08/07--2002/09/16. No. of transcripts = 2343
 * `cnn-5.csv`. Data from  2002/09/17--2012/05/18. No. of transcripts = 101336
 * `cnn-6.csv`. Data from  2012/05/19--2014/06/17. No. of transcripts = 23536
+* `cnn-7.csv`. Data from  2014/06/18--2022/02/05. No. of transcripts = 102458
 
-Total number of transcripts: 190,882
+Total number of transcripts: 293,340
 
 
 ### Notes
