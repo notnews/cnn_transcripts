@@ -1,4 +1,4 @@
-## CNN Transcripts: 2000--2025
+## CNN Transcripts 2000--2025
 
 CNN provides transcripts for its shows at [http://edition.cnn.com/TRANSCRIPTS/](http://edition.cnn.com/TRANSCRIPTS/). 
 
@@ -12,7 +12,7 @@ CNN went through a few HTML styles of the news transcripts between `2000/01/01` 
 
 ### Data
 
-The parsed data are posted at [http://dx.doi.org/10.7910/DVN/ISDPJU](http://dx.doi.org/10.7910/DVN/ISDPJU). For copyright reasons, access is restricted for research purposes only. The data are split into 6 files:
+The parsed data are posted at [http://dx.doi.org/10.7910/DVN/ISDPJU](http://dx.doi.org/10.7910/DVN/ISDPJU). For copyright reasons, access is restricted for research purposes only. The data are split into eight files:
 
 * `cnn-1.csv`. Data from  2000/01/01--2000/04/20. No. of transcripts = 7017
 * `cnn-2.csv`. Data from  2000/04/21--2001/04/03. No. of transcripts = 21381
