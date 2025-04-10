@@ -31,3 +31,11 @@ Total number of transcripts: 336,902
 * 2000-04-22 content within <p> and </p> tag
 * 2001-04-04 No URL prefix, subheader ==> h4, content next table <br> tag
 * Scripts from 2014
+
+## 🔗 Adjacent Repositories
+
+- [notnews/fox_news_transcripts](https://github.com/notnews/fox_news_transcripts) — Fox News Transcripts 2003--2025
+- [notnews/msnbc_transcripts](https://github.com/notnews/msnbc_transcripts) — MSNBC Transcripts: 2003--2022
+- [notnews/archive_news_cc](https://github.com/notnews/archive_news_cc) — Closed Caption Transcripts of News Videos from archive.org 2014--2023
+- [notnews/nbc_transcripts](https://github.com/notnews/nbc_transcripts) — NBC transcripts 2011--2014
+- [notnews/stanford_tv_news](https://github.com/notnews/stanford_tv_news) — Stanford Cable TV News Dataset
