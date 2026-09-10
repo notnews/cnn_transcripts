@@ -1,3 +1,22 @@
-scripts/.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+docs/_build/
+_site/
 .DS_Store
-/scripts/.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Scrape output and logs never belong in git; the data live on Dataverse.
+data/
+*.log
+*.jsonl
+*.parquet
+*.csv
+*.csv.gz
+!tests/fixtures/*.csv

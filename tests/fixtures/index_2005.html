@@ -1,0 +1,437 @@
+<html lang="en">
+<head>
+	<script type="text/javascript" language="JavaScript1.1" src="http://ar.atwola.com/file/adsWrapper.js"></script>
+<style type="text/css">
+<!--
+.aoltextad { text-align: justify; font-size: 12px; color: black; font-family: Georgia, sans-serif }
+-->
+</style>
+<script language="JavaScript1.1" type="text/javascript" src="http://ar.atwola.com/file/adsPopup2.js"></script>
+<script language="JavaScript1.2" type="text/javascript">
+
+function CNN_getCookies() {
+	var hash = new Array;
+	if ( document.cookie ) {
+		var cookies = document.cookie.split( '; ' );
+		for ( var i = 0; i < cookies.length; i++ ) {
+			var namevaluePairs = cookies[i].split( '=' );
+			hash[namevaluePairs[0]] = unescape( namevaluePairs[1] ) || null;
+		}
+	}
+	return hash;
+}
+
+function CNN_parseCookieData( cookieDataString ) {
+	var cookieValues = new Object();
+	var separatePairs = cookieDataString.split( '&' );
+	for ( var i = 0; i < separatePairs.length; i++  ) {
+		var separateValues = separatePairs[i].split( ':' );
+		cookieValues[separateValues[0]] = separateValues[1] || null;
+	}
+	return cookieValues;
+}
+
+// default values
+var adHeadOffset = 0;
+var adHeadClass = "us.low";
+
+var allCookies = CNN_getCookies();
+var adHeadCookie = allCookies[ "Target" ] || null;
+var isClassAndOffsetValid = false;
+var alreadySwappedTargetImage = false;
+var alreadySwappedCookieCrumb = false;
+
+if ( adHeadCookie ) {	// got milk?
+	var adHeadHash = CNN_parseCookieData( adHeadCookie );
+	//alert("o=" +  adHeadHash[ "o" ] + "\nclass=" + adHeadHash[ "class"]);
+	if ( adHeadHash[ "o" ] && adHeadHash[ "class" ] ) {
+		var validClassesAndOffsets = [ 'us.low', 0, 'us.high', 1, 'intl', 2, 'intl', 3, 'us.edu', 0, 'us.gov', 0, 'us.mil', 0, 'us.org', 0 ];
+		for ( var i = 0; i < validClassesAndOffsets.length; i+=2 ) {
+			if ( validClassesAndOffsets[i] == adHeadHash[ "class" ] && validClassesAndOffsets[i+1] == adHeadHash[ "o" ] ) {
+				isClassAndOffsetValid = true;
+				break;
+			}
+		}
+	}
+	if ( isClassAndOffsetValid ) {
+		adHeadOffset = adHeadHash[ "o" ];
+		adHeadClass = adHeadHash[ "class" ];
+	}
+}
+
+document.adoffset = adHeadOffset;
+document.adPopupDomain = window.location.hostname;
+document.adPopupFile = '/cnn_adspaces/adsPopup2.html';
+document.adPopupInterval = 'P24';
+document.adPopunderInterval = 'P24';
+adSetOther('&TVAR='+escape('class=' + adHeadClass));
+
+//alert( "GLOBAL\nalreadySwappedTargetImage=" + alreadySwappedTargetImage + "\nisClassAndOffsetValid=" + isClassAndOffsetValid );
+
+function getAdHeadCookie( imageRef ) {
+	//alert( "isClassAndOffsetValid=" + isClassAndOffsetValid + "\nadHeadOffset=" + adHeadOffset + "\nadHeadClass=" + adHeadClass);
+	var newSrc = "http://cnn.dyn.cnn.com/1.gif?" + new Date().getTime();
+	if ( !alreadySwappedTargetImage && !isClassAndOffsetValid && WM_browserAcceptsCookies() ) {
+		//alert( "getAdHeadCookie\nalreadySwappedTargetImage=" + alreadySwappedTargetImage + "\nisClassAndOffsetValid=" + isClassAndOffsetValid );
+		imageRef.src = newSrc;
+		alreadySwappedTargetImage = true;
+	}
+}
+
+</script>
+
+	<title>CNN.com - Transcripts</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<link rel="Start" href="/">
+	<link rel="Search" href="/search/">
+	<link rel="stylesheet" href="http://i.cnn.net/cnn/.element/ssi/css/1.3/common.css" type="text/css">
+	<link rel="stylesheet" href="http://i.cnn.net/cnn/.element/ssi/css/1.3/story.css" type="text/css">
+	<link rel="stylesheet" href="http://i.cnn.net/cnn/.element/ssi/css/1.1/main.css" type="text/css">
+	<script language="JavaScript1.1" src="http://i.cnn.net/cnn/.element/ssi/js/1.3/main.js" type="text/javascript"></script>
+	<script>
+		var cnnSiteWideCurrDate = new Date(2005, 6, 14);
+	</script>
+</head>
+<body id="contentArea" onload="cnnHandleCSIs()">
+<a name="top_of_page"></a>
+<a href="#ContentArea"><img src="http://i.cnn.net/cnn/images/1.gif" alt="Skip to main content" align="right" width="10" height="1" border="0" hspace="0" vspace="0"></a>
+<div>
+<table width="770" cellpadding="0" cellspacing="0" border="0" id="cnnCeil">
+	<tr>
+		<td width="218" rowspan="2" valign="bottom"><a href="/"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/ceiling/logo.cnn.com.gif" width="218" height="45" hspace="0" vspace="0" border="0"></a></td>
+		<td width="552" height="18" align="right" colspan="2">
+			<table cellpadding="0" cellspacing="0" border="0" align="right">
+				<tr valign="middle">
+					<td class="cnnCeilB"><a href="/linkto/intl.html" onClick="clickEdLink()">International Edition</a>&nbsp;&nbsp;|</td>
+					<td><script type="text/javascript" language="JavaScript1.2">
+<!--
+displayHat( 'white' );
+//-->
+					</script></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr height="27">
+		<td class="cnnCeilW"><a href="http://audience.cnn.com/services/cnn/memberservices/regwall/member_profile.jsp?source=cnn">Member Services</a></td>	
+		<td class="cnnCeilW" align="right"><a href="javascript:CNN_openPopup('/feedback/help/homepage/frameset.exclude.html','620x364','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=auto,resizable=no,width=620,height=430');"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/ceiling/homepage.btn.gif" width="185" height="17" border="0" hspace="0" vspace="0"></a></td>
+	</tr>
+</table>
+<div class="cnnNoCeilAd"><div><img src="http://i.cnn.net/cnn/images/1.gif"  alt="" width="1" height="1" border="0" vspace="0" hspace="0"></div></div>
+<div id="cnnBreakingNewsBanner"></div>
+<script>
+if(location.hostname.indexOf('edition.')>-1) {
+cnnAddCSI('cnnBreakingNewsBanner','/.element/ssi/intl/breaking_news/1.1/banner.exclude.html');
+} else {
+cnnAddCSI('cnnBreakingNewsBanner','/.element/ssi/www/breaking_news/1.1/banner.exclude.html');
+}
+</script>
+
+<table width="770" cellpadding="0" cellspacing="0" border="0" id="cnnCeilSearch">
+		<colgroup>
+			<col width="8">
+			<col width="572">
+			<col width="32">
+			<col width="158">
+		</colgroup>
+		<tr>
+			<td class="cnnGrad"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/nav.gradient.gif" width="8" height="30" alt=""></td>
+			<td><div class="cnnNoWrap">
+				<form action="http://search.cnn.com/cnn/search" method="get" onsubmit="return CNN_validateSearchForm(this);">
+					<input type="hidden" name="source" value="cnn"><input type="hidden" name="invocationType" value="search/top"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/hdr.gif" width="63" height="12" alt="Search" class="cnnSrch"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/vert.divider.gif" width="2" height="29" style="margin: 0 15px" alt=""><input type="radio" name="sites" value="web" checked class="cnnR"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/the.web.gif" width="44" height="7" alt="" class="cnnWeb"><input type="radio" name="sites" value="cnn" class="cnnR"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/cnn.com.gif" width="41" height="7" alt="" class="cnnCNN"><input type="text" name="query" value="" title="Enter text to search for and click 'Search'" size="30" maxlength="40" class="cnnInput"><input type="submit" value="SEARCH" class="cnnFormButtonSearch">
+				</form></div>
+			</td>
+			<td><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/vert.divider.gif" width="2" height="29" style="margin: 0 15px" alt=""></td>
+			<td><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/yahoo.logo.gif" width="158" height="29" alt=""></td>
+		</tr>
+	</table>
+
+<table width="770" cellpadding="0" cellspacing="0" border="0" id="cnnArticleWireFrame">
+<colgroup>
+	<col width="126">
+	<col width="634">
+</colgroup>
+<tr valign="top">
+<td id="cnnNavBar" rowspan="2">
+	<ul id="nav">
+	<li><div><a href="/">Home Page</a></div></li>
+	<li><div><a href="/WORLD/">World</a></div></li>
+	<li><div><a href="/US/">U.S.</a></div></li>	
+	<li><div><a href="/WEATHER/">Weather</a></div></li>
+	<li class="money"><div><a href="/money/index.html?cnn=yes">Business</a></div></li>
+	<li class="sports"><div><a href="/si/index.html?cnn=yes">Sports</a></div></li>
+	<li><div><a href="/POLITICS/">Politics</a></div></li>
+	<li><div><a href="/LAW/">Law</a></div></li>
+	<li><div><a href="/TECH/">Technology</a></div></li>
+	<li><div><a href="/TECH/space/">Science &amp; Space</a></div></li>
+	<li><div><a href="/HEALTH/">Health</a></div></li>
+	<li><div><a href="/SHOWBIZ/">Entertainment</a></div></li>
+	<li><div><a href="/TRAVEL/">Travel</a></div></li>
+	<li><div><a href="/EDUCATION/">Education</a></div></li>
+	<li><div><a href="/SPECIALS/">Special Reports</a></div></li>
+	<li class="cnnFreeVideo"><div><a href="/video/">Video</a></div></li>	
+	<li class="autos"><div><a href="/AUTOS/">Autos</a></div></li>	
+</ul>
+	<div class="cnnNavAd"><!-- transcript/main/left.120x90 -->
+<script language="JavaScript1.1">
+<!--
+adSetTarget('_top');
+htmlAdWH( (new Array(93182790,93182790,93182815,93182815))[document.adoffset||0] , 120, 90);
+//-->
+</script><noscript><a href="http://ar.atwola.com/link/93182790/aol" target="_top"><img src="http://ar.atwola.com/image/93182790/aol" alt="Click here for our advertiser" width="120" height="90" border="0"></a></noscript></div>
+	<div class="cnnNavHeader"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/nav/hdr.services.gif" height="18" width="126" hspace="0" vspace="0" border="0"></div>
+<div class="cnnNavBot">
+	<div><img src="http://i.a.cnn.net/cnn/.element/img/1.3/nav/gray.top.gif" height="1" width="126" hspace="0" vspace="0" border="0"></div>
+	<div onmouseover="cnnSetHoverClass(this,'cnnHover',1)" onmouseout="cnnSetHoverClass(this,'cnnHover',0)"><a href="/EMAIL/">E-mail Newsletters</a></div>
+	<div class="cnnDiv">&nbsp;</div>
+	<div onmouseover="cnnSetHoverClass(this,'cnnHover',1)" onmouseout="cnnSetHoverClass(this,'cnnHover',0)"><a href="/youralerts/">Your E-mail Alerts</a></div>
+	<div class="cnnDiv">&nbsp;</div>
+	<div onmouseover="cnnSetHoverClass(this,'cnnHover',1)" onmouseout="cnnSetHoverClass(this,'cnnHover',0)" style="height:16px;"><a href="/services/rss/">RSS <img src="http://i.cnn.net/cnn/.element/img/1.3/nav/xml.icon.navbar.2.gif" height="16" width="24" hspace="1" vspace="0" border="0" align="absbottom"></a></div>
+	<div class="cnnDiv">&nbsp;</div>
+	<div onmouseover="cnnSetHoverClass(this,'cnnHover',1)" onmouseout="cnnSetHoverClass(this,'cnnHover',0)"><a href="/togo/">CNNtoGO</a></div>
+	<div class="cnnDiv">&nbsp;</div>
+	<div onmouseover="cnnSetHoverClass(this,'cnnHover',1)" onmouseout="cnnSetHoverClass(this,'cnnHover',0)"><a href="/feedback/">Contact Us</a></div>
+	<div><img src="http://i.a.cnn.net/cnn/.element/img/1.3/nav/gray.bot.gif" height="1" width="126" hspace="0" vspace="0" border="0"></div>
+</div>
+</td>
+<td id="cnnArticleHeader">
+	<div><table cellpadding="0" cellspacing="0" border="0" width="634"><tr valign="bottom"><td width="264"><img src="http://i.cnn.net/cnn/.element/img/1.0/sect/TRANSCRIPTS/header.transcripts.gif" alt="TRANSCRIPTS" width="259" height="32" hspace="0" vspace="0" border="0" align="left"></td><td width="370" align="left"><span style="font-family: verdana, helvetica, sans-serif; font-size:10px; font-weight:bold; padding:1px;"><a HREF="javascript:CNN_openPopup('/TRANSCRIPTS/providers/frameset.exclude.html','620x430','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=620,height=430')">Transcript Providers</a></span></td></tr><tr><td colspan="2" bgcolor="#ffffff"><img src="http://i.cnn.net/cnn/images/1.gif" width="634" height="1" hspace="0" vspace="0" alt="" border="0"/></td></tr>
+</table></div>
+	</td>
+</tr>
+<tr valign="top">
+<td><a name="ContentArea"></a><div style="padding-left:10px;">
+	<table width="346" height="280" cellpadding="0" cellspacing="0" border="0" align="right">
+	<tr valign="top">
+	<td><img src="http://i.cnn.net/cnn/images/1.gif" width="10" height="280" hspace="0" vspace="0" alt="" border="0"></td>
+	<td width="336" align="right"><!-- transcript/section_front/right.336x280 -->
+<script language="JavaScript1.1">
+<!--
+adSetTarget('_top');
+htmlAdWH( (new Array(93182792,93182792,93182817,93182817))[document.adoffset||0] , 336, 280);
+//-->
+</script><noscript><a href="http://ar.atwola.com/link/93182792/aol" target="_top"><img src="http://ar.atwola.com/image/93182792/aol" alt="Click here for our advertiser" width="336" height="280" border="0"></a></noscript><br clear="all"><br>
+<div id="contextualLinks"></div>
+<script>
+        if(cnnEnableCL) {
+                if(!(location.hostname.indexOf('cnn.com')>-1)) {
+                        cnnAddCSI('contextualLinks','/.element/ssi/sect/1.1/misc/contextual/variable.html', 'site=cnn_us_ctxt&id=cnnus');
+                } else {
+                        cnnAddCSI('contextualLinks','http://cl.cnn.com/ctxtlink/jsp/cnn-variable.jsp', 'site=cnn_us_ctxt&id=cnnus');
+                }
+        }
+</script>
+	</td>
+	</tr>
+	</table>
+
+	
+	<table width="288" cellpadding="0" cellspacing="0" border="0" bgcolor="#666666">
+	<tr valign="bottom">
+		<td><img src="http://i.cnn.net/cnn/images/1.gif" width="6" height="24" hspace="0" vspace="0" alt="" border="0"></td>
+		<td><img src="http://i.cnn.net/cnn/.element/img/1.0/sect/TRANSCRIPTS/shows_by_cat_white_header.gif" width="125" height="19" hspace="0" vspace="0" alt="" border="0"></td>
+		<td align="left">&nbsp;</td>
+	</tr>
+	</table>
+	
+	<P><a href="/TRANSCRIPTS/" class="cnnTransProv">Return to Transcripts main page</a></P>
+	
+	<P class="cnnTransHead">CNN Transcripts for July 12, 2005</P>
+	<P class="cnnBodyText"><b>Note:</b> This page is continually updated as new transcripts become available. If you cannot find a specific segment, check back later.</P>
+	<div class="cnnTransDate">AMERICAN MORNING</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.01.html">Dennis Not Done Yet; Top Member of Lebanon's Government Target of Apparent Assassination Plot</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.02.html">Beirut Bombing Targets Minister; Is Rove the Leak?</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.04.html">Is Karl Rove the Leak?; Bush's Iraq Strategy</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.03.html">State Department Confirms at Least One American Still Missing, Presumed Dead in London Terror Attacks</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.05.html">Two American Sisters Survived London Bombings; New Troops Deployed to Afghanistan; Panda-Monium!</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ltm.06.html">Dennis Brings Floods; London Terror; Travel Ban Lifted for U.S. Military in London</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">ANDERSON COOPER 360 DEGREES</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/acd.01.html">London Bombings Suicide Attacks; Tropical Storm Emily; Rove and Plame</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">CNN LARRY KING LIVE</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lkl.01.html">White House Pressured Over Karl Rove's Role in Releasing CIA Operative's Name; Search for Natalee Holloway Continues</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">CNN LIVE AT DAYBREAK</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lad.01.html">Latest News on Investigation into Last Week's Terrorist Bombings in London; Controversy Over Transit Security in U.S.</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lad.02.html">Saving the SEAL; L.A. Police Shooting; Return to Space for Shuttle</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lad.03.html">Rove Leaked; No Tunnel Cells; Cleaning Up; Return to Space</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lad.04.html">London Terror; Lebanon Bombing; Dennis: The Aftermath</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">CNN LIVE TODAY</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lt.01.html">White House Quiet on Rove Evidence; Discovery Ready for Launch</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lt.03.html">Supreme Decision; London Terror; Dennis: The Aftermath; U.S. Afghan Mission</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lt.02.html">L.A. Filmmaker Heading Home After Being Jailed for 54 Days in Iraq by U.S. Military; Latest Developments in CIA Leak Investigation</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lt.04.html">London Terror Attacks: The Investigation; Funding Fight; Is Rove the Leak?</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">CNN NEWSNIGHT AARON BROWN</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/asb.01.html">Police Identify Four Suspects in London Bombings; NASA Set for Launch Tomorrow</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">CNN WOLF BLITZER REPORTS</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/wbr.01.html">Arrest Made in Connection with London Bombings; White House Mum Over Rove as CIA Leaker; GOP Chair Defends Rove</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">INSIDE POLITICS</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ip.01.html">Joe Biden Interview; Karl Rove and the CIA Leak</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">INSIGHT</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/i_ins.00.html">London Terror Attacks</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">LIVE FROM...</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lol.01.html">Dennis' Aftermath in Pensacola; Life After Columbia Disaster</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lol.02.html">Arrest Made in London Bombings Investigation; White House Under Fire Over Rove Leak Allegations; Death of Baby Girl in Police Standoff Under Investigation</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lol.04.html">British Bombings Investigation; Security Watch; Woes of Rove</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lol.03.html">Questions About Karl Rove Persist; Burn Mask Victim Identified in London</a><BR>
+&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/lol.05.html">White House Mum on Rove Allegations; Police Arrest Man in Connection with London Bombings; NASA Prepared for Tomorrow's Shuttle Launch; Mother Demands Answers on Child Shot in Standoff; White House Press Secretary Grilled Over Rove</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">LOU DOBBS TONIGHT</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ldt.01.html">Rove and CIA Leak; Under Fire; Terror Hunt; Illegal Immigration</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">NANCY GRACE</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ng.01.html">Nancy Grace for July 12, 2005, CNNHN</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">PAULA ZAHN NOW</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/pzn.01.html">London Terror Arrests; Karl Rove Under Fire; Food Allergies</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">SHOWBIZ TONIGHT</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/sbt.01.html">Showbiz Tonight for July 12, 2005, CNNHN</a><BR>
+</div>
+
+<BR><BR>
+
+<div class="cnnTransDate">YOUR WORLD TODAY</div>
+<div class="cnnSectBulletItems">&#149;&nbsp;<a href="/TRANSCRIPTS/0507/12/ywt.01.html">After the Attacks; Police Arrest Bomb Suspect in West Yorkshire; Israel Bombing</a><BR>
+</div>
+
+<BR><BR>
+
+</div>
+</td>
+</tr>
+</table>
+<div id="cnnFootBox"><div id="cnnFootNav">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td><div class="cnn4pxLpad"><a href="http://edition.cnn.com" onClick="clickEdLink()">International Edition</a></div></td>
+		<td>
+			<form>
+				<select title="CNN.com is available in different languages" name="languages" size="1" onChange="if (this.options[selectedIndex].value != '') location.href=this.options[selectedIndex].value" class="cnnFormSelectSm">
+					<option value="" disabled selected>Languages</option>
+					<option value="" disabled>---------</option>
+					<option value="http://arabic.cnn.com/">Arabic</option>				
+					<option value="http://www.CNN.co.jp/">Japanese</option>
+					<option value="http://www.joins.com/cnn/">Korean</option>
+					<option value="http://cnnturk.com/">Turkish</option>				
+				</select>
+			</form>
+		</td>
+		<td><a href="/CNN/Programs/">CNN TV</a></td>
+		<td><a href="/CNNI/">CNN International</a></td>
+		<td><a href="/HLN/">Headline News</a></td>
+		<td><a href="/TRANSCRIPTS/">Transcripts</a></td>
+		<td><a href="/services/advertise/">Advertise with Us</a></td>
+		<td align="right" class="cnn7pxRpad"><a href="/INDEX/about.us/">About Us</a></td>
+	</tr>
+</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="cnnFootSearch">
+	<colgroup>
+		<col width="572">
+		<col width="32">
+		<col width="158">
+	</colgroup>
+	<tr valign="middle">
+		<td><form action="http://search.cnn.com/cnn/search" method="get" onSubmit="return CNN_validateSearchForm(this);"><input type="hidden" name="source" value="cnn"><input type="hidden" name="invocationType" value="search/bottom"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/hdr.gif" width="63" height="12" hspace="0" vspace="9" border="0" alt="Search" class="cnnSrch"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/vert.divider.floor.gif" width="2" height="30" hspace="15" vspace="0" border="0" alt=""><input type="radio" name="sites" value="web" checked class="cnnR"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/the.web.gif" width="44" height="7" hspace="0" vspace="0" border="0" alt="" class="cnnWeb"><input type="radio" name="sites" value="cnn" class="cnnR"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/cnn.com.gif" width="41" height="7" hspace="0" vspace="0" border="0" alt="" class="cnnCNN"><input type="text" name="query" value="" title="Enter text to search for and click 'Search'" size="30" maxlength="40" class="cnnInput"><input type="submit" value="SEARCH" class="cnnFormButtonSearch"></form>
+		</td>
+		<td><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/vert.divider.floor.gif" width="2" height="30" hspace="15" vspace="0" border="0" alt=""></td>
+		<td><img src="http://i.a.cnn.net/cnn/.element/img/1.3/searchbar/yahoo.logo.gif" width="158" height="29" hspace="0" vspace="0" border="0" alt=""></td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10" id="cnnFoot">
+	<colgroup>
+		<col width="440">
+		<col width="270">
+	</colgroup>
+	<tr valign="top">
+		<td><b>&copy; 2005 Cable News Network LP, LLLP.</b><br>A Time Warner Company. All Rights Reserved.<br><a href="/interactive_legal.html">Terms</a> under which this service is provided to you.<br>Read our <a href="/privacy.html">privacy guidelines</a>. <a href="/feedback/">Contact us</a>.</td>
+		<td align="right">
+			<table border="0" cellpadding="0" cellspacing="0" id="cnnIconMap">
+				<tr>
+					<td width="11"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/floor/dots.gif" width="1" height="64" hspace="0" vspace="0" border="0" alt=""></td>
+					<td valign="top">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td valign="top" class="cnn4pxRpad"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/floor/offsite.gif" alt="Offsite Icon" width="28" height="13" border="0"></td>
+								<td valign="top">All external sites will open in a new browser.<br>CNN.com does not endorse external sites.</td>
+							</tr>
+							<tr class="cnnNoPad">
+								<td valign="middle" class="cnn4pxRpad"><a href="/services/rss/"><img src="http://i.a.cnn.net/cnn/.element/img/1.3/floor/xml.gif" alt="RSS Feed" width="28" height="13" border="0"></a></td>
+								<td><a href="/services/rss/">Add RSS Headlines</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table></div>
+<div id="csiIframe" style="visibility:hidden;height:0px;width:0px;"></div>
+<img src="http://cnn.dyn.cnn.com/cookie.crumb" alt="" width="1" height="1" >
+<!-- home/top_layer.101x1 -->
+<script language="JavaScript1.1" type="text/javascript"><!--
+var MacPPC = (navigator.platform == 'MacPPC') ? true : false;
+if (!MacPPC) {
+adSetType('J');
+htmlAdWH( (new Array(93137910,93137910,93182827,93182827))[document.adoffset||0], 101, 1);
+adSetType('');
+}
+// --></script>
+
+<!--include virtual="/.element/ssi/misc/1.0/data.txt"-->
+<!--include virtual="/.element/ssi/misc/1.3/footer.txt"-->
+<img src="http://i.a.cnn.net/cnn/1.gif" alt="" id="TargetImage" name="TargetImage" width="1" height="1" onLoad="getAdHeadCookie(this)">
+
+<script language="JavaScript1.1" src="http://ar.atwola.com/file/adsEnd.js"></script>
+
+</div>
+</body>
+</html>
+
