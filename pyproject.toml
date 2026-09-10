@@ -4,7 +4,7 @@ description = "Scraper and provenance record for the CNN Transcripts 2000--2025 
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Gaurav Sood", email = "gsood07@gmail.com" }]
+authors = [{ name = "Gaurav Sood", email = "contact@gsood.com" }]
 requires-python = ">=3.12"
 version = "1.0.0"
 classifiers = [
