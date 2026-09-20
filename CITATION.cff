@@ -7,7 +7,6 @@ date-released: 2025-03-16
 authors:
   - family-names: "Sood"
     given-names: "Gaurav"
-    email: "contact@gsood.com"
   - family-names: "Laohaprapanon"
     given-names: "Suriyan"
 repository-code: "https://github.com/notnews/cnn_transcripts"
