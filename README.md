@@ -1,6 +1,5 @@
 ## CNN Transcripts 2000--2025
 
-[![CI](https://github.com/notnews/cnn_transcripts/actions/workflows/ci.yml/badge.svg)](https://github.com/notnews/cnn_transcripts/actions/workflows/ci.yml)
 [![Data: Dataverse](https://img.shields.io/badge/data-10.7910%2FDVN%2FISDPJU-blue)](https://doi.org/10.7910/DVN/ISDPJU)
 [![License: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -79,7 +78,7 @@ uv run cnn-transcripts upload data/cnn_transcripts.parquet
 
 `scrape` defaults to 60 requests per minute, three retries, and a 30-second timeout. It exits non-zero and lists the failed URLs if any transcript could not be fetched.
 
-Development: `uv run ruff check . && uv run ruff format --check . && uv run pytest`, or `uv run pre-commit install` once.
+Development: `uv run ruff check . && uv run ruff format --check . && uv run pytest`.
 
 ### Citation
 
@@ -98,3 +97,7 @@ Code is MIT. The transcripts are CNN's; the Dataverse copy is restricted to rese
 - [notnews/stanford_tv_news](https://github.com/notnews/stanford_tv_news) — Stanford Cable TV News Dataset
 
 ✨ _Powered by [Adjacent](https://github.com/gojiplus/adjacent)_ 🚀
+
+## Maintenance
+
+This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
