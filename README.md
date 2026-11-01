@@ -92,12 +92,11 @@ Code is MIT. The transcripts are CNN's; the Dataverse copy is restricted to rese
 
 - [notnews/fox_news_transcripts](https://github.com/notnews/fox_news_transcripts) — Fox News Transcripts 2003--2025
 - [notnews/msnbc_transcripts](https://github.com/notnews/msnbc_transcripts) — MSNBC Transcripts: 2008–2022
-- [notnews/archive_news_cc](https://github.com/notnews/archive_news_cc) — Closed captions from Internet Archive TV News, 2009–2023
 - [notnews/nbc_transcripts](https://github.com/notnews/nbc_transcripts) — NBC-hosted MSNBC transcripts 2008–2014
-- [notnews/stanford_tv_news](https://github.com/notnews/stanford_tv_news) — Stanford Cable TV News Dataset
+- [notnews/archive_news_cc](https://github.com/notnews/archive_news_cc) — Closed captions from Internet Archive TV News, 2009–2023
+- [notnews/top_news](https://github.com/notnews/top_news) — Collecting news URLs hourly from major national news sites since 2022
 
 ✨ _Powered by [Adjacent](https://github.com/gojiplus/adjacent)_ 🚀
-
 ## Maintenance
 
 This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
