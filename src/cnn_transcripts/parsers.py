@@ -101,7 +101,7 @@ def parse_aired(text: str) -> Aired:
 
     Returns:
         The parsed components. Every field is ``None`` when the text has no
-        recognisable "Aired" line, so a caller can never inherit a previous
+        recognizable "Aired" line, so a caller can never inherit a previous
         page's date.
     """
     match = AIRED.search(normalize_space(text))
